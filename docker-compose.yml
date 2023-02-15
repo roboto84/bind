@@ -1,0 +1,116 @@
+version: "3.8"
+services:
+  air_collect:
+    build: air_collect
+    restart: on-failure
+    volumes:
+      - ${DB_LOCATION:-./data}:/db
+      - ${LOG_LOCATION-./logs}/air_collect:/usr/src/air_collect/log
+    environment:
+      SQL_LITE_DB: /db/air_db
+      CLIMATE_CELL_API_KEY: ${CLIMATE_CELL_API_KEY}
+      QUERY_API_INTERVAL: ${QUERY_API_INTERVAL:-3600}
+      NUM_OF_LIVE_READINGS: ${NUM_OF_LIVE_READINGS:-100}
+      COORDINATE_LAT: ${COORDINATE_LAT:-29.654311}
+      COORDINATE_LONG: ${COORDINATE_LONG:--82.395474}
+
+  wh00t_server:
+    build: wh00t_server
+    restart: on-failure
+    volumes:
+      - ${LOG_LOCATION-./logs}/wh00t_server:/usr/src/wh00t_server/log
+    environment:
+      SERVER_PORT: ${SOCKET_SERVER_PORT:-3001}  
+    ports:
+      - ${SOCKET_SERVER_PORT:-3001}:${SOCKET_SERVER_PORT:-3001}
+
+  roboto_api:
+    build: roboto_api
+    restart: on-failure
+    volumes:
+      - ${DB_LOCATION:-./data}:/db
+      - ${LOG_LOCATION-./logs}/roboto_api:/usr/src/roboto_api/log
+    environment:
+      AIR_DB: /db/air_db
+      LEXI_DB: /db/lexicon_db
+      AIR_LOCATION: ${AIR_LOCATION}
+      HOST_SERVER_ADDRESS: roboto_api
+      WH00T_SERVER_ADDRESS: wh00t_server
+      SOCKET_SERVER_PORT: ${SOCKET_SERVER_PORT:-3001}
+      HTTP_SERVER_PORT: ${HTTP_SERVER_PORT:-8000}
+      MERRIAM_WEBSTER_API_KEY: ${MERRIAM_WEBSTER_API_KEY}
+      OXFORD_APP_ID: ${OXFORD_APP_ID}
+      OXFORD_APP_KEY: ${OXFORD_APP_KEY}
+      SSL_KEYFILE: ${SSL_KEYFILE}
+      SSL_CERT_FILE: ${SSL_CERT_FILE}
+    ports: 
+      - ${HTTP_SERVER_PORT:-8000}:${HTTP_SERVER_PORT:-8000}
+    depends_on:
+      - air_collect
+      - wh00t_server
+
+  roboto_ui:
+    build: roboto_ui
+    restart: on-failure
+    environment:
+      API_SSL: ${API_SSL:-"false"}
+      API_URL: ${API_URL}
+      API_PORT: ${HTTP_SERVER_PORT:-8000}
+    ports: 
+      - 8080:8080
+    depends_on:
+      - roboto_api
+
+  air_bot:
+    build: air_bot
+    restart: on-failure
+    volumes:
+      - ${DB_LOCATION:-./data}:/db
+      - ${LOG_LOCATION-./logs}/air_bot:/usr/src/air_bot/log
+    environment:
+      SQL_LITE_DB: /db/air_db
+      HOST_SERVER_ADDRESS: wh00t_server
+      SOCKET_SERVER_PORT: ${SOCKET_SERVER_PORT:-3001}
+      TIMEZONE: ${TIMEZONE:-"US/Eastern"}
+    depends_on:
+      - wh00t_server
+
+  lexicon_bot:
+    build: lexicon_bot
+    restart: on-failure
+    volumes:
+      - ${DB_LOCATION:-./data}:/db
+      - ${LOG_LOCATION-./logs}/lexicon_bot:/usr/src/lexicon_bot/log
+    environment:
+      SQL_LITE_DB: /db/lexicon_db
+      HOST_SERVER_ADDRESS: wh00t_server
+      SOCKET_SERVER_PORT: ${SOCKET_SERVER_PORT:-3001}
+      MERRIAM_WEBSTER_API_KEY: ${MERRIAM_WEBSTER_API_KEY}
+      OXFORD_APP_ID: ${OXFORD_APP_ID}
+      OXFORD_APP_KEY: ${OXFORD_APP_KEY}
+    depends_on:
+      - wh00t_server
+
+  gopher_bot:
+    build: gopher_bot
+    restart: on-failure
+    volumes:
+      - ${LOG_LOCATION-./logs}/gopher_bot:/usr/src/gopher_bot/log
+    environment:
+      HOST_SERVER_ADDRESS: wh00t_server
+      SOCKET_SERVER_PORT: ${SOCKET_SERVER_PORT:-3001}
+    depends_on:
+      - wh00t_server
+
+  arcadia_bot:
+    build: arcadia_bot
+    restart: on-failure
+    volumes:
+      - ${DB_LOCATION:-./data}:/db
+      - ${LOG_LOCATION-./logs}/arcadia_bot:/usr/src/arcadia_bot/log
+    environment:
+      SQL_LITE_DB: /db/arcadia_db
+      HOST_SERVER_ADDRESS: wh00t_server
+      SOCKET_SERVER_PORT: ${SOCKET_SERVER_PORT:-3001}
+    depends_on:
+      - wh00t_server

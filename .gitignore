@@ -1,0 +1,9 @@
+data
+logs
+.env
+.env.local
+
+# Idea
+.idea
+*.log.*
+*.iml
