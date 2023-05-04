@@ -1,30 +1,31 @@
-<h1 align="center">roboto</h1>
+<h1 align="center">Bind</h1>
 
 <div align="center">
-	<img src="assets/roboto.png" width="250" title="roboto logo">
+	<img src="assets/bind.png" width="250" title="bind logo">
 </div>
 
 
 ## About
 
-`roboto` is a system designed to function as a "personal internet" for the modern homesteader/researcher/user to support learning and curiosity in many realms. This is an ongoing project that is constantly evolving.
+`Bind` is a system designed to function as a "personal internet" for the modern homesteader/researcher/user to 
+support learning and curiosity in many realms. This is an ongoing project that is constantly evolving.
 
-Roboto is currently composed of a weather tracking system (**Air**), a personalized dictionary (**Lexicon**), and a chat application (**wh00t**), including various chatbots. More features are coming to help communicate, perform effective research and take advantage of IoT technologies in order to be able to learn, create, analyze, and communicate all in one place. 
+Bind is currently composed of a weather tracking system (**Air**), a personalized dictionary (**Lexicon**), and a chat application (**wh00t**), including various chatbots. More features are coming to help communicate, perform effective research and take advantage of IoT technologies in order to be able to learn, create, analyze, and communicate all in one place. 
 
 The overall intention for this project is to be able to easily spin up an instance to your liking, for your needs. Roboto can work as a LAN based system or one you host online. You are in control of your data, with easy access to your SQLite databases (you choose their location).
 
 
-To get started with **roboto**, simply follow the instructions below.
+To get started with **Bind**, simply follow the instructions below.
 
 
 ## Demo
-- [roboto demo - UI](https://apps.roboto84.dev/)
-- [roboto demo - API docs](https://api.roboto84.dev:8000/docs)
+- [Bind demo - UI](https://bind.roboto84.dev/)
+- [Bind demo - API docs](https://api.roboto84.dev:8000/docs)
 
 <div align="center">
-	<img src="assets/roboto_1.png" title="roboto - light mode">
+	<img src="assets/roboto_1.png" title="Bind - light mode">
     <br/>
-    roboto home - light mode
+    Bind home - light mode
     <br/><br/>
     <img src="assets/roboto_2.png" title="Air - light mode">
     <br/>
@@ -81,12 +82,12 @@ To get started with **roboto**, simply follow the instructions below.
 </div>
 
 ## Submodules
-- The `roboto` repository consists of the following Git submodules:
+- The `bind` repository consists of the following Git submodules:
 
     | Repo | URL | Tech | Description
     |------|-----|------|-------------
-    | `roboto_ui` | https://github.com/roboto84/roboto_ui | React/Typescript | frontend
-    | `roboto_api` | https://github.com/roboto84/roboto_api | Python | backend
+    | `bind_ui` | https://github.com/roboto84/bind_ui | React/Typescript | frontend
+    | `bind_api` | https://github.com/roboto84/bind_api | Python | backend
     | `air_collect` | https://github.com/roboto84/air_collect | Python | weather collection
     | `wh00t_server` | https://github.com/roboto84/wh00t_server| Python | chat server
     | `air_bot` | https://github.com/roboto84/air_bot | Python | weather chatbot
@@ -99,11 +100,10 @@ To get started with **roboto**, simply follow the instructions below.
 - [docker](https://docs.docker.com/get-docker/) or [docker-compose standalone](https://docs.docker.com/compose/install/)
 
 ## API Keys
-In order to setup an instance of `roboto` you must  acquire the following API keys:
+In order to setup an instance of `Bind` you must  acquire the following API keys:
 
 - Dictionary data for **Lexicon**:
     - Merriam-Webster Dictionary (**Required**) - https://dictionaryapi.com
-    - Oxford Dictory (**Optional**) - https://developer.oxforddictionaries.com
 - Weather data for **Air**:
     - Tomorrow.io (**Required**) - https://docs.tomorrow.io/reference/welcome
 
@@ -124,8 +124,6 @@ In order to setup an instance of `roboto` you must  acquire the following API ke
     | `LOG_LOCATION` | Where logs are stored. | `./logs`
     | `DB_LOCATION` | Where SQLite databases are stored. | `./data`
     | `MERRIAM_WEBSTER_API_KEY` | Merriam Webster API Key obtained in the [API Keys](#api-keys) section. | *not set*
-    | `OXFORD_APP_ID` | **optional** - Oxford Dictionary App ID obtained in the [API Keys](#api-keys) section. | *not set*
-    | `OXFORD_APP_KEY` | **optional** - Oxford Dictionary App Key obtained in the [API Keys](#api-keys) section. | *not set*
     | `CLIMATE_CELL_API_KEY` | Tomorrow.io API Key obtained in the [API Keys](#api-keys) section. | *not set*
     | `API_SSL` | Set to `true` if you are utilizing SSL for `roboto_api`. You must include `SSL_KEYFILE` and `SSL_CERT_FILE` locations as shown below. | `false`
     | `SSL_CERT_FILE` | **optional** - Location of SSL certificate. | *not set*
@@ -148,10 +146,10 @@ For example, to set `MERRIAM_WEBSTER_API_KEY` and `CLIMATE_CELL_API_KEY` and cha
 ## Install
 - Clone repo and its submodules.
     ```
-    git clone --recurse-submodules https://github.com/roboto84/roboto.git
+    git clone --recurse-submodules https://github.com/roboto84/bind.git
     ```
     ```
-    cd roboto
+    cd bind
     ```
 
 - Generate a `.env` file based off of defaults and overrides. (**Note:** This command removes existing `.env` file,
@@ -170,14 +168,14 @@ For example, to set `MERRIAM_WEBSTER_API_KEY` and `CLIMATE_CELL_API_KEY` and cha
     (To run in detached mode add `-d` to the docker command.)
 
 
-- Open browser to [localhost:8080](http://localhost:8080) to view **roboto** running with all of its services.
+- Open browser to [localhost:8080](http://localhost:8080) to view **Bind** running with all of its services.
 
 ## Commit Conventions
 Git commits follow [Conventional Commits](https://www.conventionalcommits.org) message style as explained in detail on their website.
 
 <br/>
 <sup>
-    <a href="https://www.flaticon.com/free-icons/robot" title="robot icons">
-        roboto icon created by Freepik - Flaticon
+    <a href="https://www.flaticon.com/free-icons/flask" target="_blank" title="flask icons">
+        Bind icon created by Freepik - Flaticon
     </a>
 </sup>
