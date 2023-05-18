@@ -30,6 +30,8 @@ services:
     volumes:
       - ${DB_LOCATION:-./data}:/db:z
       - ${LOG_LOCATION-./logs}/bind_api:/usr/src/bind_api/log:z
+      - ${SSL_CERT_FILE-./tmp}:/ssl/cert.pem:z
+      - ${SSL_KEYFILE-./tmp}:/ssl/key.pem:z
     environment:
       AIR_DB: /db/air_db
       LEXI_DB: /db/lexicon_db
@@ -42,8 +44,8 @@ services:
       MERRIAM_WEBSTER_API_KEY: ${MERRIAM_WEBSTER_API_KEY}
       OXFORD_APP_ID: ${OXFORD_APP_ID}
       OXFORD_APP_KEY: ${OXFORD_APP_KEY}
-      SSL_KEYFILE: ${SSL_KEYFILE}
-      SSL_CERT_FILE: ${SSL_CERT_FILE}
+      SSL_CERT_FILE: /ssl/cert.pem
+      SSL_KEYFILE: /ssl/key.pem
     ports: 
       - ${HTTP_SERVER_PORT:-8000}:${HTTP_SERVER_PORT:-8000}
     depends_on:
