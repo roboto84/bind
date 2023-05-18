@@ -4,12 +4,6 @@
 [submodule "wh00t_server"]
 	path = wh00t_server
 	url = https://github.com/roboto84/wh00t_server
-[submodule "roboto_api"]
-	path = roboto_api
-	url = https://github.com/roboto84/roboto_api
-[submodule "roboto_ui"]
-	path = roboto_ui
-	url = https://github.com/roboto84/roboto_ui
 [submodule "air_bot"]
 	path = air_bot
 	url = https://github.com/roboto84/air_bot
@@ -22,3 +16,9 @@
 [submodule "arcadia_bot"]
 	path = arcadia_bot
 	url = https://github.com/roboto84/arcadia_bot
+[submodule "bind_ui"]
+	path = bind_ui
+	url = https://github.com/roboto84/bind_ui.git
+[submodule "bind_api"]
+	path = bind_api
+	url = https://github.com/roboto84/bind_api.git
