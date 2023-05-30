@@ -7,10 +7,10 @@
 
 ## About
 
-`Bind` is a system designed to function as a "personal internet" for the modern homesteader/researcher/user to
+`Bind` is a system designed to function as a "personal internet" for the modern homesteader/researcher/user to 
 support learning and curiosity in many realms. This is an ongoing project that is constantly evolving.
 
-Bind is currently composed of a weather tracking system (**Air**), a personalized dictionary (**Lexicon**), and a chat application (**wh00t**), including various chatbots. More features are coming to help communicate, perform effective research and take advantage of IoT technologies in order to be able to learn, create, analyze, and communicate all in one place.
+Bind is currently composed of a weather tracking system (**Air**), a personalized dictionary (**Lexicon**), and a chat application (**wh00t**), including various chatbots. More features are coming to help communicate, perform effective research and take advantage of IoT technologies in order to be able to learn, create, analyze, and communicate all in one place. 
 
 The overall intention for this project is to be able to easily spin up an instance to your liking, for your needs. Bind can work as a LAN based system or one you host online. You are in control of your data, with easy access to your SQLite databases (you choose their location).
 
@@ -84,16 +84,16 @@ To get started with **Bind**, simply follow the instructions below.
 ## Submodules
 - The `bind` repository consists of the following Git submodules:
 
-  | Repo | URL | Tech | Description
-      |------|-----|------|-------------
-  | `bind_ui` | https://github.com/roboto84/bind_ui | React/Typescript | frontend
-  | `bind_api` | https://github.com/roboto84/bind_api | Python | backend
-  | `air_collect` | https://github.com/roboto84/air_collect | Python | weather collection
-  | `wh00t_server` | https://github.com/roboto84/wh00t_server| Python | chat server
-  | `air_bot` | https://github.com/roboto84/air_bot | Python | weather chatbot
-  | `lexicon_bot` | https://github.com/roboto84/lexicon_bot | Python | dictionary chatbot
-  | `gopher_bot` | https://github.com/roboto84/gopher_bot | Python | gopher chatbot
-  | `arcadia_bot` | https://github.com/roboto84/arcadia_bot | Python | arcadia chatbot
+    | Repo | URL | Tech | Description
+    |------|-----|------|-------------
+    | `bind_ui` | https://github.com/roboto84/bind_ui | React/Typescript | frontend
+    | `bind_api` | https://github.com/roboto84/bind_api | Python | backend
+    | `air_collect` | https://github.com/roboto84/air_collect | Python | weather collection
+    | `wh00t_server` | https://github.com/roboto84/wh00t_server| Python | chat server
+    | `air_bot` | https://github.com/roboto84/air_bot | Python | weather chatbot
+    | `lexicon_bot` | https://github.com/roboto84/lexicon_bot | Python | dictionary chatbot
+    | `gopher_bot` | https://github.com/roboto84/gopher_bot | Python | gopher chatbot
+    | `arcadia_bot` | https://github.com/roboto84/arcadia_bot | Python | arcadia chatbot
 
 
 ## Requirements
@@ -111,27 +111,27 @@ In order to setup an instance of `Bind` you must  acquire the following API keys
 
 - The following table details all of the environmental variables that appear in [.env.defaults](.env.defaults):
 
-  | Env | Description | Default
-      |-----|-------------|--------
-  | `SOCKET_SERVER_PORT` | Port used by chat server (`wh00t_server`). | `3001`
-  | `HTTP_SERVER_PORT` | Port used by `bind_api`. | `8000`
-  | `AIR_LOCATION` | The name of the location you want to collect weather for. | `Gainesville, FL`
-  | `TIMEZONE` | The timezone you want `bind_ui` to use. | `US/Eastern`
-  | `COORDINATE_LAT` | Latitude of the location you want to collect weather for. Goto https://www.latlong.net/ for assistance. | `29.651634`
-  | `COORDINATE_LONG` | Longitude of the location you want to collect weather for. Goto https://www.latlong.net/ for assistance. | `-82.324829`
-  | `QUERY_API_INTERVAL` | The amount of seconds to wait before querying the weather API, i.e. polling interval. | `3600`
-  | `NUM_OF_LIVE_READINGS` | The max number of weather data rows the *live data* csv file should hold at any given time. This does not impact the SQLite DB, as it collects all readings without limits. | `100`
-  | `LOG_LOCATION` | Where logs are stored. | `./logs`
-  | `DB_LOCATION` | Where SQLite databases are stored. | `./data`
-  | `MERRIAM_WEBSTER_API_KEY` | Merriam Webster API Key obtained in the [API Keys](#api-keys) section. | *not set*
-  | `CLIMATE_CELL_API_KEY` | Tomorrow.io API Key obtained in the [API Keys](#api-keys) section. | *not set*
-  | `API_SSL` | Set to `true` if you are utilizing SSL for `bind_api`. You must include `SSL_KEYFILE` and `SSL_CERT_FILE` locations as shown below. | `false`
-  | `SSL_CERT_FILE` | **optional** - Location of SSL certificate. | *not set*
-  | `SSL_KEYFILE` | **optional** - Location of SSL private key. | *not set*
+    | Env | Description | Default
+    |-----|-------------|--------
+    | `SOCKET_SERVER_PORT` | Port used by chat server (`wh00t_server`). | `3001`
+    | `HTTP_SERVER_PORT` | Port used by `bind_api`. | `8000`
+    | `AIR_LOCATION` | The name of the location you want to collect weather for. | `Gainesville, FL`
+    | `TIMEZONE` | The timezone you want `bind_ui` to use. | `US/Eastern`
+    | `COORDINATE_LAT` | Latitude of the location you want to collect weather for. Goto https://www.latlong.net/ for assistance. | `29.651634`
+    | `COORDINATE_LONG` | Longitude of the location you want to collect weather for. Goto https://www.latlong.net/ for assistance. | `-82.324829`
+    | `QUERY_API_INTERVAL` | The amount of seconds to wait before querying the weather API, i.e. polling interval. | `3600`
+    | `NUM_OF_LIVE_READINGS` | The max number of weather data rows the *live data* csv file should hold at any given time. This does not impact the SQLite DB, as it collects all readings without limits. | `100`
+    | `LOG_LOCATION` | Where logs are stored. | `./logs`
+    | `DB_LOCATION` | Where SQLite databases are stored. | `./data`
+    | `MERRIAM_WEBSTER_API_KEY` | Merriam Webster API Key obtained in the [API Keys](#api-keys) section. | *not set*
+    | `CLIMATE_CELL_API_KEY` | Tomorrow.io API Key obtained in the [API Keys](#api-keys) section. | *not set*
+    | `API_SSL` | Set to `true` if you are utilizing SSL for `bind_api`. You must include `SSL_KEYFILE` and `SSL_CERT_FILE` locations as shown below. | `false`
+    | `SSL_CERT_FILE` | **optional** - Location of SSL certificate. | *not set*
+    | `SSL_KEYFILE` | **optional** - Location of SSL private key. | *not set*
 
 
-- To override any of the default environmental variables, create a file called `.env.local`.
-  For example, to set `MERRIAM_WEBSTER_API_KEY` and `CLIMATE_CELL_API_KEY` and change `HTTP_SERVER_PORT`:
+- To override any of the default environmental variables, create a file called `.env.local`. 
+For example, to set `MERRIAM_WEBSTER_API_KEY` and `CLIMATE_CELL_API_KEY` and change `HTTP_SERVER_PORT`:
     - create a filed called `.env.local`:
         ```
         #.env.local
@@ -161,11 +161,11 @@ In order to setup an instance of `Bind` you must  acquire the following API keys
     ```
     docker compose up
     ```
-  or with docker-compose standalone.
+    or with docker-compose standalone.
     ```
     docker-compose up
     ```
-  (To run in detached mode add `-d` to the docker command.)
+    (To run in detached mode add `-d` to the docker command.)
 
 
 - Open browser to [localhost:8080](http://localhost:8080) to view **Bind** running with all of its services.
