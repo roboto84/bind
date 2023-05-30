@@ -7,12 +7,12 @@
 
 ## About
 
-`Bind` is a system designed to function as a "personal internet" for the modern homesteader/researcher/user to 
+`Bind` is a system designed to function as a "personal internet" for the modern homesteader/researcher/user to
 support learning and curiosity in many realms. This is an ongoing project that is constantly evolving.
 
-Bind is currently composed of a weather tracking system (**Air**), a personalized dictionary (**Lexicon**), and a chat application (**wh00t**), including various chatbots. More features are coming to help communicate, perform effective research and take advantage of IoT technologies in order to be able to learn, create, analyze, and communicate all in one place. 
+Bind is currently composed of a weather tracking system (**Air**), a personalized dictionary (**Lexicon**), and a chat application (**wh00t**), including various chatbots. More features are coming to help communicate, perform effective research and take advantage of IoT technologies in order to be able to learn, create, analyze, and communicate all in one place.
 
-The overall intention for this project is to be able to easily spin up an instance to your liking, for your needs. Roboto can work as a LAN based system or one you host online. You are in control of your data, with easy access to your SQLite databases (you choose their location).
+The overall intention for this project is to be able to easily spin up an instance to your liking, for your needs. Bind can work as a LAN based system or one you host online. You are in control of your data, with easy access to your SQLite databases (you choose their location).
 
 
 To get started with **Bind**, simply follow the instructions below.
@@ -23,77 +23,77 @@ To get started with **Bind**, simply follow the instructions below.
 - [Bind demo - API docs](https://api.roboto84.dev:8000/docs)
 
 <div align="center">
-	<img src="assets/roboto_1.png" title="Bind - light mode">
+	<img src="assets/bind_1.png" title="Bind - light mode">
     <br/>
     Bind home - light mode
     <br/><br/>
-    <img src="assets/roboto_2.png" title="Air - light mode">
+    <img src="assets/bind_2.png" title="Air - light mode">
     <br/>
     Air - light mode
     <br/><br/>
-    <img src="assets/roboto_3.png" title="Air - dark mode">
+    <img src="assets/bind_3.png" title="Air - dark mode">
     <br/>
     Air - dark mode
     <br/><br/>
-    <img src="assets/roboto_4.png" title="Air - charts - dark mode">
+    <img src="assets/bind_4.png" title="Air - charts - dark mode">
     <br/>
     Air - charts - dark mode
     <br/><br/>
-    <img src="assets/roboto_5.png" title="Air - charts - light mode">
+    <img src="assets/bind_5.png" title="Air - charts - light mode">
     <br/>
     Air - charts - light mode
     <br/><br/>
-    <img src="assets/roboto_6.png" title="Air - tables - light mode">
+    <img src="assets/bind_6.png" title="Air - tables - light mode">
     <br/>
     Air - tables - light mode
     <br/><br/>
-    <img src="assets/roboto_7.png" title="Lexicon - light mode">
+    <img src="assets/bind_7.png" title="Search - light mode">
     <br/>
-    Lexicon - light mode
+    Search - light mode
     <br/><br/>
-    <img src="assets/roboto_8.png" title="Lexicon - dark mode">
+    <img src="assets/bind_8.png" title="Search - dark mode">
     <br/>
-    Lexicon - dark mode
+    Search - dark mode
     <br/><br/>
-    <img src="assets/roboto_9.png" title="wh00t - dark mode">
+    <img src="assets/bind_9.png" title="Chat - dark mode">
     <br/>
-    wh00t - dark mode
+    Chat - dark mode
     <br/><br/>
-    <img src="assets/roboto_10.png" title="wh00t - Air bot - dark mode">
+    <img src="assets/bind_10.png" title="Chat - Air bot - dark mode">
     <br/>
-    wh00t - Air bot - dark mode
+    Chat - Air bot - dark mode
     <br/><br/>
-    <img src="assets/roboto_11.png" title="wh00t - Lexicon bot - light mode">
+    <img src="assets/bind_11.png" title="Chat - Lexicon bot - light mode">
     <br/>
-    wh00t - Lexicon bot - light mode
+    Chat - Lexicon bot - light mode
     <br/><br/>
-    <img src="assets/roboto_12.png" title="wh00t - Arcadia bot - light mode">
+    <img src="assets/bind_12.png" title="Chat - Arcadia bot - light mode">
     <br/>
-    wh00t - Arcadia bot - light mode
+    Chat - Arcadia bot - light mode
     <br/><br/>
-    <img src="assets/roboto_13.png" title="wh00t - Arcadia bot - dark mode">
+    <img src="assets/bind_13.png" title="Search - Side Chat - dark mode">
     <br/>
-    wh00t - Arcadia bot - dark mode
+    Search - Side Chat - dark mode
     <br/><br/>
-    <img src="assets/roboto_14.png" title="wh00t - mini chat - light mode">
+    <img src="assets/bind_14.png" title="Air - Side Chat - light mode">
     <br/>
-    wh00t - mini chat - light mode
+    Air - Side Chat - light mode
     <br/><br/>
 </div>
 
 ## Submodules
 - The `bind` repository consists of the following Git submodules:
 
-    | Repo | URL | Tech | Description
-    |------|-----|------|-------------
-    | `bind_ui` | https://github.com/roboto84/bind_ui | React/Typescript | frontend
-    | `bind_api` | https://github.com/roboto84/bind_api | Python | backend
-    | `air_collect` | https://github.com/roboto84/air_collect | Python | weather collection
-    | `wh00t_server` | https://github.com/roboto84/wh00t_server| Python | chat server
-    | `air_bot` | https://github.com/roboto84/air_bot | Python | weather chatbot
-    | `lexicon_bot` | https://github.com/roboto84/lexicon_bot | Python | dictionary chatbot
-    | `gopher_bot` | https://github.com/roboto84/gopher_bot | Python | gopher chatbot
-    | `arcadia_bot` | https://github.com/roboto84/arcadia_bot | Python | arcadia chatbot
+  | Repo | URL | Tech | Description
+      |------|-----|------|-------------
+  | `bind_ui` | https://github.com/roboto84/bind_ui | React/Typescript | frontend
+  | `bind_api` | https://github.com/roboto84/bind_api | Python | backend
+  | `air_collect` | https://github.com/roboto84/air_collect | Python | weather collection
+  | `wh00t_server` | https://github.com/roboto84/wh00t_server| Python | chat server
+  | `air_bot` | https://github.com/roboto84/air_bot | Python | weather chatbot
+  | `lexicon_bot` | https://github.com/roboto84/lexicon_bot | Python | dictionary chatbot
+  | `gopher_bot` | https://github.com/roboto84/gopher_bot | Python | gopher chatbot
+  | `arcadia_bot` | https://github.com/roboto84/arcadia_bot | Python | arcadia chatbot
 
 
 ## Requirements
@@ -111,27 +111,27 @@ In order to setup an instance of `Bind` you must  acquire the following API keys
 
 - The following table details all of the environmental variables that appear in [.env.defaults](.env.defaults):
 
-    | Env | Description | Default
-    |-----|-------------|--------
-    | `SOCKET_SERVER_PORT` | Port used by chat server (`wh00t_server`). | `3001`
-    | `HTTP_SERVER_PORT` | Port used by `roboto_api`. | `8000`
-    | `AIR_LOCATION` | The name of the location you want to collect weather for. | `Gainesville, FL`
-    | `TIMEZONE` | The timezone you want `roboto_ui` to use. | `US/Eastern`
-    | `COORDINATE_LAT` | Latitude of the location you want to collect weather for. Goto https://www.latlong.net/ for assistance. | `29.651634`
-    | `COORDINATE_LONG` | Longitude of the location you want to collect weather for. Goto https://www.latlong.net/ for assistance. | `-82.324829`
-    | `QUERY_API_INTERVAL` | The amount of seconds to wait before querying the weather API, i.e. polling interval. | `3600`
-    | `NUM_OF_LIVE_READINGS` | The max number of weather data rows the *live data* csv file should hold at any given time. This does not impact the SQLite DB, as it collects all readings without limits. | `100`
-    | `LOG_LOCATION` | Where logs are stored. | `./logs`
-    | `DB_LOCATION` | Where SQLite databases are stored. | `./data`
-    | `MERRIAM_WEBSTER_API_KEY` | Merriam Webster API Key obtained in the [API Keys](#api-keys) section. | *not set*
-    | `CLIMATE_CELL_API_KEY` | Tomorrow.io API Key obtained in the [API Keys](#api-keys) section. | *not set*
-    | `API_SSL` | Set to `true` if you are utilizing SSL for `roboto_api`. You must include `SSL_KEYFILE` and `SSL_CERT_FILE` locations as shown below. | `false`
-    | `SSL_CERT_FILE` | **optional** - Location of SSL certificate. | *not set*
-    | `SSL_KEYFILE` | **optional** - Location of SSL private key. | *not set*
+  | Env | Description | Default
+      |-----|-------------|--------
+  | `SOCKET_SERVER_PORT` | Port used by chat server (`wh00t_server`). | `3001`
+  | `HTTP_SERVER_PORT` | Port used by `bind_api`. | `8000`
+  | `AIR_LOCATION` | The name of the location you want to collect weather for. | `Gainesville, FL`
+  | `TIMEZONE` | The timezone you want `bind_ui` to use. | `US/Eastern`
+  | `COORDINATE_LAT` | Latitude of the location you want to collect weather for. Goto https://www.latlong.net/ for assistance. | `29.651634`
+  | `COORDINATE_LONG` | Longitude of the location you want to collect weather for. Goto https://www.latlong.net/ for assistance. | `-82.324829`
+  | `QUERY_API_INTERVAL` | The amount of seconds to wait before querying the weather API, i.e. polling interval. | `3600`
+  | `NUM_OF_LIVE_READINGS` | The max number of weather data rows the *live data* csv file should hold at any given time. This does not impact the SQLite DB, as it collects all readings without limits. | `100`
+  | `LOG_LOCATION` | Where logs are stored. | `./logs`
+  | `DB_LOCATION` | Where SQLite databases are stored. | `./data`
+  | `MERRIAM_WEBSTER_API_KEY` | Merriam Webster API Key obtained in the [API Keys](#api-keys) section. | *not set*
+  | `CLIMATE_CELL_API_KEY` | Tomorrow.io API Key obtained in the [API Keys](#api-keys) section. | *not set*
+  | `API_SSL` | Set to `true` if you are utilizing SSL for `bind_api`. You must include `SSL_KEYFILE` and `SSL_CERT_FILE` locations as shown below. | `false`
+  | `SSL_CERT_FILE` | **optional** - Location of SSL certificate. | *not set*
+  | `SSL_KEYFILE` | **optional** - Location of SSL private key. | *not set*
 
 
-- To override any of the default environmental variables, create a file called `.env.local`. 
-For example, to set `MERRIAM_WEBSTER_API_KEY` and `CLIMATE_CELL_API_KEY` and change `HTTP_SERVER_PORT`:
+- To override any of the default environmental variables, create a file called `.env.local`.
+  For example, to set `MERRIAM_WEBSTER_API_KEY` and `CLIMATE_CELL_API_KEY` and change `HTTP_SERVER_PORT`:
     - create a filed called `.env.local`:
         ```
         #.env.local
@@ -161,11 +161,11 @@ For example, to set `MERRIAM_WEBSTER_API_KEY` and `CLIMATE_CELL_API_KEY` and cha
     ```
     docker compose up
     ```
-    or with docker-compose standalone.
+  or with docker-compose standalone.
     ```
     docker-compose up
     ```
-    (To run in detached mode add `-d` to the docker command.)
+  (To run in detached mode add `-d` to the docker command.)
 
 
 - Open browser to [localhost:8080](http://localhost:8080) to view **Bind** running with all of its services.
