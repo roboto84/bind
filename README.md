@@ -7,12 +7,47 @@
 
 ## About
 
-`Bind` is a system designed to function as a "personal internet" for the modern homesteader/researcher/user to 
-support learning and curiosity in many realms. This is an ongoing project that is constantly evolving.
+### What is Bind ?
 
-Bind is currently composed of a weather tracking system (**Air**), a personalized dictionary (**Lexicon**), and a chat application (**wh00t**), including various chatbots. More features are coming to help communicate, perform effective research and take advantage of IoT technologies in order to be able to learn, create, analyze, and communicate all in one place. 
+Bind is a LAN knowledge sharing and management system.  It comes equipped with weather tracking, bookmark management, and a chat system.
 
-The overall intention for this project is to be able to easily spin up an instance to your liking, for your needs. Bind can work as a LAN based system or one you host online. You are in control of your data, with easy access to your SQLite databases (you choose their location).
+#### Bind is ...
+
+- [Air](https://roboto84.dev/projects/services/#Air) - A Local Weather Tracking System
+    - Weather Summary (with basic weather alerts)
+    - Weather Charts (historical)
+    - Weather Tables (historical)
+
+- [Wh00t](https://roboto84.dev/projects/chat/#wh00t) - A Chat System
+    - A single chatroom with multi-user support
+    - Bot support
+
+- [Arcadia](https://www.roboto84.dev/projects/services/#Arcadia), [Lexicon](https://www.roboto84.dev/projects/services/#Lexicon) - A Bookmark Manager and Dictionary
+    - URL bookmarking manager based on Tags
+    - An English dictionary
+
+#### ... integrated as one platform.
+
+### Why was it made ?
+
+It was made out of need for a local private platform that **does not leak data** to third parties and **does not go down** when the wider internet is not available.
+
+### What can Bind be used for ?
+
+It can be used for knowledge sharing and management of internet data for curiosity, research and memory mapping which allows knowledge from the internet that you acquire to work better for you.
+
+### What will Bind be in the future ?
+
+#### Bind will be ...
+- A current and historical weather system with the ability to track multiple locations at the city or town level.  It will focus on having basic and advanced weather alerts based on the ability to connect weather events to weather related health issues, such as pressure related sinus headaches. (Air)
+
+- A multi chatroom message server with AI chat and bot support focused on good user experience with a strong focus on privacy. (Wh00t)
+
+- A cache engine focused on the organization of cached assets (webpages, articles, notes, images) into productivity workspaces for knowledge management. (Arcadia, Lexicon)
+
+### What is this repo for ?
+
+The overall intention for this project is to be able to easily spin up a Bind instance to your liking, for your needs. Bind can work as a LAN based system or one you host online. You are in control of your data, with easy access to your SQLite databases by choosing their location.
 
 
 To get started with **Bind**, simply follow the instructions below.
