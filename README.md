@@ -9,7 +9,7 @@
 
 ### What is Bind ?
 
-Bind is a LAN knowledge sharing and management system.  It comes equipped with weather tracking, bookmark management, and a chat system.
+Bind is a platform that serves as a LAN knowledge sharing and management system.  It comes equipped with weather tracking, bookmark management, and a chat system.
 
 #### Bind is ...
 
@@ -39,11 +39,11 @@ It can be used for knowledge sharing and management of internet data for curiosi
 ### What will Bind be in the future ?
 
 #### Bind will be ...
-- A current and historical weather system with the ability to track multiple locations at the city or town level.  It will focus on having basic and advanced weather alerts based on the ability to connect weather events to weather related health issues, such as pressure related sinus headaches. (Air)
+- A current and historical weather system with the ability to track multiple locations at the city or town level.  It will focus on having basic and advanced weather alerts based on the ability to connect weather events to weather related health issues, such as pressure related sinus headaches. ([Air](https://roboto84.dev/projects/services/#Air))
 
-- A multi chatroom message server with AI chat and bot support focused on good user experience with a strong focus on privacy. (Wh00t)
+- A multi chatroom message server with AI chat and bot support focused on good user experience with a strong focus on privacy. ([Wh00t](https://roboto84.dev/projects/chat/#wh00t))
 
-- A cache engine focused on the organization of cached assets (webpages, articles, notes, images) into productivity workspaces for knowledge management. (Arcadia, Lexicon)
+- A cache engine focused on the organization of cached assets (webpages, articles, notes, images) into productivity workspaces for knowledge management. ([Arcadia](https://www.roboto84.dev/projects/services/#Arcadia), [Lexicon](https://www.roboto84.dev/projects/services/#Lexicon))
 
 ### What is this repo for ?
 
